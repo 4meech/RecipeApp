@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="buttonCategoryColor">#525DC0</color>
+    <color name="buttonFavColor">#E13E3E</color>
+    <color name="navBar">#F4FAFF</color>
+    <color name="statusBar">#F4FAFF</color>
+
 </resources>
