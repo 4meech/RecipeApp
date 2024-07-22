@@ -5,53 +5,42 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#F4FAFF"
+    android:backgroundTint="@color/commonBackground_color"
     tools:context=".MainActivity">
-
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="@dimen/main_space_16"
+        android:layout_marginVertical="@dimen/main_space_half_8"
         android:layout_marginBottom="4dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-
         <Button
             android:id="@+id/catButton"
             style="@style/StyleNavButton"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
-            android:text="@string/button_categories" />
-
+            android:backgroundTint="@color/buttonCategory_color"
+            android:text="@string/title_categories"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/favButton"
-            android:layout_width="wrap_content"
+            style="@style/StyleNavButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/button_favs"
-            style="@style/StyleNavButton"/>
-
-
+            android:backgroundTint="@color/buttonFav_color"
+            android:text="@string/title_favorite"
+            app:icon="@drawable/ic_heart_empty"
+            app:iconGravity="textEnd"
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:contentDescription="fav icon"
-        android:src="@drawable/ic_heart_empty"
-
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

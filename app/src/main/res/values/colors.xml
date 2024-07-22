@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="buttonCategoryColor">#525DC0</color>
-    <color name="buttonFavColor">#E13E3E</color>
-    <color name="navBar">#F4FAFF</color>
-    <color name="statusBar">#F4FAFF</color>
-
+    <color name="black_color">#FF0000</color>
+    <color name="white_color">#FFFFFF</color>
+    <color name="buttonCategory_color">#525DC0</color>
+    <color name="buttonFav_color">#E13E3E</color>
+    <color name="commonBackground_color">#F4FAFF</color>
 </resources>
