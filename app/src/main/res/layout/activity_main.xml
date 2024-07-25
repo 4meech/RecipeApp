@@ -5,15 +5,43 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/common_background_color"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginHorizontal="@dimen/main_space_16"
+        android:layout_marginVertical="@dimen/main_space_half_8"
+        android:layout_marginBottom="@dimen/dim_2"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
 
+        <Button
+            android:id="@+id/catButton"
+            style="@style/StyleNavButton"
+            android:layout_width="@dimen/dim_0"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dim_2"
+            android:layout_weight="1"
+            android:backgroundTint="@color/button_category_color"
+            android:text="@string/title_categories"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/favButton"
+            style="@style/StyleNavButton"
+            android:layout_width="@dimen/dim_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_2"
+            android:layout_weight="1"
+            android:backgroundTint="@color/button_fav_color"
+            android:text="@string/title_favorite"
+            app:icon="@drawable/ic_heart_empty"
+            app:iconGravity="textEnd"
+            tools:ignore="VisualLintButtonSize" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
