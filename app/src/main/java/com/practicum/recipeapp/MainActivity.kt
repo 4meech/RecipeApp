@@ -2,6 +2,7 @@ package com.practicum.recipeapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import com.practicum.recipeapp.databinding.ActivityMainBinding
 
@@ -18,10 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         if (savedInstanceState == null) {
-            val fragmentManager = supportFragmentManager
-            val categoriesListFragment = CategoriesListFragment()
-            fragmentManager.commit {
-                add(R.id.mainContainer, categoriesListFragment)
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add<CategoriesListFragment>(R.id.mainContainer)
             }
         }
     }
