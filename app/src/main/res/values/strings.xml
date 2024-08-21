@@ -2,4 +2,18 @@
     <string name="app_name">RecipeApp</string>
     <string name="title_categories">категории</string>
     <string name="title_favorite">избранное</string>
+    <string name="cat_burgers_name">Бургеры</string>
+    <string name="cat_burgers_description">Рецепты всех популярных видов бургеров</string>
+    <string name="cat_dessert_name">Десерты</string>
+    <string name="cat_dessert_description">Самые вкусные рецепты десертов специально для вас</string>
+    <string name="cat_pizza_name">Пицца</string>
+    <string name="cat_pizza_description">Пицца на любой вкус и цвет. Лучшая подборка для тебя</string>
+    <string name="cat_fish_name">Рыба</string>
+    <string name="cat_fish_description">Печёная, жареная, сушеная, любая рыба на твой вкус</string>
+    <string name="cat_soup_name">Супы</string>
+    <string name="cat_soup_description">От классики до экзотики: мир в одной тарелке</string>
+    <string name="cat_salad_name">Салаты</string>
+    <string name="cat_salad_description">Хрустящий калейдоскоп под соусом вдохновения</string>
+
+
 </resources>
