@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import com.practicum.recipeapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +22,18 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
                 setReorderingAllowed(true)
-                add<CategoriesListFragment>(R.id.mainContainer)
+                add<CategoriesListFragment>(binding.mainContainer.id)
+            }
+        }
+
+        binding.favButton.setOnClickListener {
+            supportFragmentManager.commit {
+                replace<FavoritesFragment>(binding.mainContainer.id)
+            }
+        }
+        binding.catButton.setOnClickListener {
+            supportFragmentManager.commit {
+                replace<CategoriesListFragment>(binding.mainContainer.id)
             }
         }
     }
