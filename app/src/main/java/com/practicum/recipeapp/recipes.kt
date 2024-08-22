@@ -1,55 +1,48 @@
 package com.practicum.recipeapp
 
-import android.content.Context
-
 object STUB {
-    private var categories: List<Category>? = null
 
-    fun categoriesInit(context: Context) {
-        if (categories == null) {
-            categories = listOf(
-                Category(
-                    id = 0,
-                    title = context.getString(R.string.cat_burgers_name),
-                    description = context.getString(R.string.cat_burgers_description),
-                    imageUrl = "burger.png"
-                ),
-                Category(
-                    id = 1,
-                    title = context.getString(R.string.cat_dessert_name),
-                    description = context.getString(R.string.cat_dessert_description),
-                    imageUrl = "dessert.png"
-                ),
-                Category(
-                    id = 2,
-                    title = context.getString(R.string.cat_pizza_name),
-                    description = context.getString(R.string.cat_pizza_description),
-                    imageUrl = "pizza.png"
-                ),
-                Category(
-                    id = 3,
-                    title = context.getString(R.string.cat_fish_name),
-                    description = context.getString(R.string.cat_fish_description),
-                    imageUrl = "fish.png"
-                ),
-                Category(
-                    id = 4,
-                    title = context.getString(R.string.cat_soup_name),
-                    description = context.getString(R.string.cat_soup_description),
-                    imageUrl = "soup.png"
-                ),
-                Category(
-                    id = 5,
-                    title = context.getString(R.string.cat_salad_name),
-                    description = context.getString(R.string.cat_salad_description),
-                    imageUrl = "salad.png"
-                ),
-            )
-        }
-    }
+    private val categories = listOf(
+        Category(
+            id = 0,
+            title = "Бургеры",
+            description = "Рецепты всех популярных видов бургеров",
+            imageUrl = "burger.png"
+        ),
+        Category(
+            id = 1,
+            title = "Десерты",
+            description = "Самые вкусные рецепты десертов специально для вас",
+            imageUrl = "dessert.png"
+        ),
+        Category(
+            id = 2,
+            title = "Пицца",
+            description = "Пицца на любой вкус и цвет. Лучшая подборка для тебя",
+            imageUrl = "pizza.png"
+        ),
+        Category(
+            id = 3,
+            title = "Рыба",
+            description = "Печёная, жареная, сушеная, любая рыба на твой вкус",
+            imageUrl = "fish.png"
+        ),
+        Category(
+            id = 4,
+            title = "Супы",
+            description = "От классики до экзотики: мир в одной тарелке",
+            imageUrl = "soup.png"
+        ),
+        Category(
+            id = 5,
+            title = "Салаты",
+            description = "Хрустящий калейдоскоп под соусом вдохновения",
+            imageUrl = "salad.png"
+        ),
+    )
 
-    fun getCategories(): List<Category>? {
-        return categories ?: emptyList()
+    fun getCategories(): List<Category> {
+        return categories
     }
 }
 
@@ -64,12 +57,12 @@ data class Recipe(
     val id: Int,
     val title: String,
     val ingredients: List<Ingredient>,
-    val method: String,
+    val method: List<String>,
     val imageUrl: String
 )
 
 data class Ingredient(
-    val quantity: Double,
+    val quantity: String,
     val unitOfMeasure: String,
     val description: String
 )
