@@ -13,4 +13,11 @@
         <item name="android:paddingHorizontal">@dimen/dim_10</item>
         <item name="cornerRadius">@dimen/main_space_half_8</item>
     </style>
+
+    <style name="StyleHeaderTextTitle" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/montserrat_alternates_semi_bold</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+        <item name="android:textColor">@color/header_text_color</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
 </resources>
