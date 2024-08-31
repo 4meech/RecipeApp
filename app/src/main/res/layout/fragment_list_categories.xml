@@ -15,7 +15,7 @@
             android:id="@+id/ivHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="Header Image"
+            android:contentDescription="@string/cd_category_header"
             android:scaleType="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -23,18 +23,17 @@
             app:srcCompat="@drawable/burger" />
 
         <TextView
-            style="@style/StyleHeaderTextTitle"
             android:id="@+id/tvHeaderTitle"
+            style="@style/StyleHeaderTextTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/main_space_16"
             android:layout_marginBottom="@dimen/main_space_16"
-            android:padding="@dimen/dim_10"
             android:background="@drawable/shape_rounded_header_title"
-            android:text="burgers\nдлинные бургеры"
+            android:padding="@dimen/dim_10"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="burgers\nдлинные бургеры" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -42,13 +41,12 @@
         android:id="@+id/rvCategories"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/main_space_16"
         android:layout_marginHorizontal="@dimen/main_space_half_8"
         android:layout_marginVertical="@dimen/main_space_half_8"
-        tools:itemCount="6"
-        app:spanCount="2"
+        android:layout_marginTop="@dimen/main_space_16"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        />
-
+        app:spanCount="2"
+        tools:itemCount="6"
+        tools:listitem="@layout/item_category" />
 
 </LinearLayout>
