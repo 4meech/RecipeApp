@@ -2,4 +2,8 @@
     <string name="app_name">RecipeApp</string>
     <string name="title_categories">категории</string>
     <string name="title_favorite">избранное</string>
+    <string name="cd_category_header">Header Image</string>
+    <string name="cd_category_image">Category Image</string>
+    <string name="cd_category_image_title">Category Image Title</string>
+    <string name="cd_category_description_text">Category description text</string>
 </resources>

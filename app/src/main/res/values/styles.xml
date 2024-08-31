@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="StyleTitle14" parent="TextAppearance.AppCompat">
+    <style name="StyleTitleText14" parent="TextAppearance.AppCompat">
         <item name="fontFamily">@font/montserrat_alternates_semi_bold</item>
         <item name="android:textSize">@dimen/text_size_14</item>
         <item name="android:textColor">@color/white_color</item>
@@ -8,7 +8,7 @@
     </style>
 
     <style name="StyleNavButton" parent="Widget.Material3.Button">
-        <item name="android:textAppearance">@style/StyleTitle14</item>
+        <item name="android:textAppearance">@style/StyleTitleText14</item>
         <item name="android:paddingVertical">@dimen/dim_10</item>
         <item name="android:paddingHorizontal">@dimen/dim_10</item>
         <item name="cornerRadius">@dimen/main_space_half_8</item>
@@ -19,5 +19,17 @@
         <item name="android:textSize">@dimen/text_size_20</item>
         <item name="android:textColor">@color/header_text_color</item>
         <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="StyleCardTextTitle" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/montserrat_alternates_semi_bold</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/header_text_color</item>
+    </style>
+
+    <style name="StyleCardTextDescription" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:textColor">@color/card_category_description_text_color</item>
     </style>
 </resources>

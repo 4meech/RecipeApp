@@ -1,42 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="224dp"
-    android:layout_marginBottom="0dp"
+    android:layout_height="@dimen/dim_224"
     android:layout_marginHorizontal="@dimen/main_space_half_8"
     android:layout_marginVertical="@dimen/main_space_half_8"
+    android:background="?attr/selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
-    android:background="?attr/selectableItemBackground"
     app:cardCornerRadius="@dimen/main_space_half_8">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivCategory"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_130dp"
+            android:contentDescription="@string/cd_category_image"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@drawable/burger" />
+
+        <TextView
+            android:id="@+id/tvCardCategoryName"
+            style="@style/StyleCardTextTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:contentDescription="@string/cd_category_image_title"
+            android:paddingStart="@dimen/main_space_half_8"
+            android:paddingTop="@dimen/main_space_half_8"
+            android:paddingEnd="@dimen/main_space_half_8"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_size_14"
+            tools:text="Бургеры" />
 
-            <ImageView
-                android:id="@+id/ivCategory"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:contentDescription="Category Image"
-                app:srcCompat="@drawable/burger" />
+        <TextView
+            android:id="@+id/tvCardCategoryDescription"
+            style="@style/StyleCardTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/cd_category_description_text"
+            android:padding="@dimen/main_space_half_8"
+            tools:text="Рецепты всех популярных видов бургеров" />
 
-            <TextView
-                android:id="@+id/tvCardCategoryName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:contentDescription="Category Image Title"
-                android:textAllCaps="true"
-                android:textSize="@dimen/text_size_14"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/tvCardCategoryDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
