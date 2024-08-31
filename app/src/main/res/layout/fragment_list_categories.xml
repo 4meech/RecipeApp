@@ -16,11 +16,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/cd_category_header"
-            android:scaleType="center"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/burger"/>
+            tools:srcCompat="@drawable/categories"/>
 
         <TextView
             android:id="@+id/tvHeaderTitle"
@@ -31,9 +31,9 @@
             android:layout_marginBottom="@dimen/main_space_16"
             android:background="@drawable/shape_rounded_header_title"
             android:padding="@dimen/dim_10"
+            android:text="@string/title_categories"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:text="burgers\nдлинные бургеры" />
+            app:layout_constraintStart_toStartOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
