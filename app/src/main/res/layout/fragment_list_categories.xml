@@ -20,7 +20,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/categories"/>
+            app:srcCompat="@drawable/categories" />
 
         <TextView
             android:id="@+id/tvHeaderTitle"
@@ -33,7 +33,7 @@
             android:padding="@dimen/dim_10"
             android:text="@string/title_categories"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
