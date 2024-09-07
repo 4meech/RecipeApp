@@ -3,7 +3,6 @@ package com.practicum.recipeapp
 import android.graphics.drawable.Drawable
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
@@ -14,19 +13,18 @@ import com.practicum.recipeapp.databinding.ItemCategoryBinding
 class CategoriesListAdapter(private val dataSet: List<Category>) :
     RecyclerView.Adapter<CategoriesListAdapter.ViewHolder>() {
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private var binding = ItemCategoryBinding.bind(view)
+    class ViewHolder(binding: ItemCategoryBinding) : RecyclerView.ViewHolder(binding.root) {
 
         val imageView: ImageView = binding.ivCategory
         val titleTextView: TextView = binding.tvCardCategoryName
         val descriptionTextView: TextView = binding.tvCardCategoryDescription
-
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_category, viewGroup, false)
-        return ViewHolder(view)
+
+        val binding =
+            ItemCategoryBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
